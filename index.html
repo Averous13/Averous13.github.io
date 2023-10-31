@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- development version, includes helpful console warnings -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+</head>
+<body>
+    <!-- <div id="app-1">
+        <ol>
+            <todo-item
+                v-for="buku in bukus"
+                v-bind:todo="buku"
+                v-bind:key="buku.id"
+                v-bind:class="{'white': !clicked, 'blue': clicked}" v-on:click ="!clicked" >    
+            ></todo-item>
+        </ol>
+    </div> -->
+
+    <div id="app">
+        Hasil : {{ hasil }} <br>
+        <input v-model="angka1" type="number">
+        <input v-model="angka2" type="number"><br>
+        <button v-on:click="hasil=angka1+angka2">+</button>
+        <button @click="hasil=angka1-angka2">-</button>
+        <button @click="hasil=angka1/angka2">/</button>
+        <button @click="hasil=angka1*angka2">x</button>
+    </div>
+   
+
+
+    <!-- <script src="app.js"></script> -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data(){
+                return {
+                    angka1:0,
+                    angka2:0,
+                    hasil: 0,
+                }
+            }
+    })
+    
+    app.mount('#app');
+    
+    </script>
+</body>
+</html>
